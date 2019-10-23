@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      webpack-dev-server ERR_CERT_INVALID on Chrome on macOS 10.15 (Catalina)
+subtitle:   
+date:       2019-10-22
+header-img:
+catalog: true
+tags:
+    - JavaScript
+    - Chrome
+    - macOS
+    - webpack
+---
+
 ## What
 最近macOS升级到10.15 Catalina，发现webpack-dev-server在Chrome下面没法运行了。
 在提示ERR_CERT_INVALID的页面，按照之前的方式点击Advanced按钮，再想要去点击Proceed或者Visit Site只有错误提示，没有授权访问页面的链接。这样自动签名的证书没法在Chrome下本地进行调试。同时试了一下Safari还是可以访问站点，但是debug的功能没有Chrome好用，所以还是要看看怎么解决Chrome下允许自签名证书的问题。
