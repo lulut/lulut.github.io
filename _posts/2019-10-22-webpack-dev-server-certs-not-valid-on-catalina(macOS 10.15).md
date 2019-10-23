@@ -1,5 +1,3 @@
-# webpack-dev-server certs not valid on macOS 10.15 (Catalina)
-
 ## What
 最近macOS升级到10.15 Catalina，发现webpack-dev-server在Chrome下面没法运行了。在提示ERR_CERT_INVALID的页面，按照之前的方式点击Advanced按钮，再想要去点击Proceed或者Visit Site发现只有错误提示，没法授权访问页面。这样自动签名的证书没法在Chrome下本地调试了，试了一下Safari还是可以访问站点，但是debug的易用性没有Safari好用。
 
