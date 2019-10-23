@@ -21,9 +21,7 @@
       },
 ```
 添加效果如图所示
-
 ![createCertificate](/img/webpack-dev-server-createCertificate.png)
-
 4. 删除ssl目录下的server.pem文件
 5. 再次启动webpack-dev-server会生成新的证书
 
