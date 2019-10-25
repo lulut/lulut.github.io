@@ -17,7 +17,9 @@ After upgrading my Mac to macOs 10.15 Catalina, I found the self-signed certific
 In the page of displaying error message: ERR_CERT_INVALID, you cannot proceed to the site by clicking Advanced button.  This issue casued me to be unable to debug front-end script in Chrome.  I tried Safari which works well as before.  But since Safari is not as easy as to use as Chrome, I have to find a way to solve this problem. 
 
 ## Why
-Through the online search, finally I found that after upgrading macOS to 10.15, it has higher requirements for the website certificate which requires an extension of certificate.  You can find details here:[Requirements for trusted certificates in iOS 13 and macOS 10.15](https://support.apple.com/en-us/HT210176).  Although this doesn't explain why works in Safari but not Chrome.
+Through the online search, finally I found that after upgrading macOS to 10.15, it has higher requirements for the website certificate which requires an extension of certificate.  You can find details here:
+[Requirements for trusted certificates in iOS 13 and macOS 10.15](https://support.apple.com/en-us/HT210176)
+Although this doesn't explain why works in Safari but not Chrome.
 
 ## How
 There will be a patch of webpack-dev-server to resolve this but the expected time is: near future.  The temparary solution is:
@@ -25,7 +27,7 @@ There will be a patch of webpack-dev-server to resolve this but the expected tim
 1. Locate `node_modules` folder and find `webpack-dev-server`.
 2. In lib/utils, find `createCertificate.js`
 3. In the parameter of creating certificate, add the following attributes in `extensions` array:
-``` json
+``` JavaScript
       {
         name: 'extKeyUsage',
         serverAuth: true,
