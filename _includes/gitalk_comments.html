@@ -1,0 +1,25 @@
+{%- if page.comments != false and jekyll.environment == "production" -%}
+
+  <!-- Gitalk comment start  -->
+
+ <!-- Link Gitalk  -->
+ <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+ <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+ <div id="gitalk-container"></div>
+ <script type="text/javascript">
+     var gitalk = new Gitalk({
+
+     // Gitalk parameters
+         clientID: 'c0b9128bd9574eb4df87', //customize
+         clientSecret: '7636a51925ba2aa00acf1d0c0e0ebc1e15358cc0', //customize
+         repo: 'lulut.github.io', //customize
+         owner: 'lulut', //customize
+         admin: ['lulut'], //customize
+         id: window.location.pathname, // leave this line as it is
+        
+     });
+     gitalk.render('gitalk-container');
+ </script> 
+ <!-- Gitalk end -->
+ 
+{%- endif -%}
