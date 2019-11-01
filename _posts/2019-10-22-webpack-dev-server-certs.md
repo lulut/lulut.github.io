@@ -22,7 +22,7 @@ Through the online search, finally I found that after upgrading macOS to 10.15, 
 Although this doesn't explain why works in Safari but not Chrome.
 
 ## How
-There will be a patch of webpack-dev-server to resolve this but the expected time is: near future.  The temparary solution is:
+There will be a patch of webpack-dev-server to resolve this but the expected time is: near future.  The temporary solution is:
 
 1. Locate `node_modules` folder and find `webpack-dev-server`.
 2. In lib/utils, find `createCertificate.js`
