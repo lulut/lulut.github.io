@@ -6,6 +6,7 @@ date:       2019-10-22
 header-img:
 catalog: true
 tags:
+    - fix
     - JavaScript
     - Chrome
     - macOS
